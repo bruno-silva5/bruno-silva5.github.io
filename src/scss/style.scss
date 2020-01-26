@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+$theme-colors: (
+  "primary": #65c9ff
+);
+
+$bg-primary: #65c9ff;
+
+// Variable Overrides
+
+// Bootstrap Sass Imports all components
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Customizations
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  // background: rgba($color: #000000, $alpha: 0.7);
+  font-family: Montserrat, sans-serif;
+}
+
+p {
+  font-weight: 500;
+}
+
+section.home div.fluid-container {
+  min-height: 550px;
+}
+
+.arrow-down {
+  animation: pulling_down 0.8s 3;
+  left: 50%;
+  transform:translateX(-50%);
+}
+
+@keyframes pulling_down {
+  0% {top: 0;}
+  70% {top: 1em;}
+  100% {top: 0}
+}
+
+section#about-me .about-me-intro::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  height: 12em;
+  background: $bg-primary;
+  z-index: -1;
+}
+
+ul {
+  list-style-type: "- " !important;
+
+  li {
+    margin: 0.5em 0;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767.98px) { 
+  section#about-me div.container:first-child div.col-md:nth-child(2) {
+    border: 0 !important;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.1) !important; 
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1) !important; 
+  }
+ }
+
