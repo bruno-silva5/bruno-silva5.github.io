@@ -1,4 +1,4 @@
 # bruno-silva5.github.io
 My portfolio
 
-[Click here](https://www.bruno-silva5.github.io/) to visit it
+[Click here](https://bruno-silva5.github.io/) to visit it
